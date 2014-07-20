@@ -1,0 +1,40 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- Button - Botones inferiores -->
+    <style name="grey_bottom_button">
+        <item name="android:textColor">@color/dark_grey_button_text</item>
+        <item name="android:background">@drawable/grey_bottom_buttons</item>
+    </style>
+
+    <!-- Textos títulos. -->
+    <style name="tittle_text">
+        <item name="android:textColor">@color/light_blue_text</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Textos contenedores. (Información base) -->
+    <style name="content_text">
+        <item name="android:textColor">@color/dark_grey_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+</resources>

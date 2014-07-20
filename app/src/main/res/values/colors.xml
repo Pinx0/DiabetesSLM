@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Grises -->
+    <color name="light_grey_background">#FBFBFB</color>
+    <color name="light_grey1_button">#F8F8F8</color>
+    <color name="light_grey2_button">#FFFFFF</color>
+    <color name="light_grey_button_pressed">#DDDDDD</color>
+    <color name="light_grey_button_border">#EEEEEE</color>
+    <color name="dark_grey_button_text">#666666</color>
+    <color name="dark_grey_text">#555555</color>
+
+    <!-- Azules -->
+    <color name="dark_blue">#5e7ca1</color>
+    <color name="light_blue_text">#9ac8e9</color>
+    <color name="light_blue_button_pressed">#f0f7fb</color>
+    <color name="light_blue_button_pressed_border">#c4e2f1</color>
+
+    <!-- Blanco -->
+    <color name="white">#FFFFFF</color>
+
+</resources>

@@ -4,3 +4,4 @@
 .DS_Store
 /build
 /app.iml
+/app/src/main/res/values/secure_strings.xml

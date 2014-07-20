@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.RadioButton;
-import es.pablolopezponce.diabetesslm.R;
+import com.pablolopezponce.diabetesslm.R;
 
 public class SetupActivity extends FragmentActivity 
 {

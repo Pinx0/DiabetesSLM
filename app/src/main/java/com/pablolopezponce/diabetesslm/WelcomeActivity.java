@@ -1,6 +1,6 @@
 package com.pablolopezponce.diabetesslm;
 
-import es.pablolopezponce.diabetesslm.resources.MyRes;
+import com.pablolopezponce.diabetesslm.resources.MyRes;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;

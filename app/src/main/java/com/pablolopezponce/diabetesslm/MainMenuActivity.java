@@ -8,7 +8,7 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.Menu;
-import es.pablolopezponce.diabetesslm.ConnectionService.LocalBinder;
+import com.pablolopezponce.diabetesslm.ConnectionService.LocalBinder;
 
 public class MainMenuActivity extends Activity {
 	

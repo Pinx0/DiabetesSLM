@@ -11,7 +11,7 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.SingleClientConnManager;
 
-import es.pablolopezponce.diabetesslm.R;
+import com.pablolopezponce.diabetesslm.R;
 
 import android.content.Context;
 

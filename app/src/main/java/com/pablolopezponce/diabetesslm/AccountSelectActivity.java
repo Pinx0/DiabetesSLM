@@ -35,9 +35,9 @@ import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.common.AccountPicker;
 
-import es.pablolopezponce.diabetesslm.resources.HttpsClient;
-import es.pablolopezponce.diabetesslm.resources.MyRes;
-import es.pablolopezponce.diabetesslm.setup.SetupActivity;
+import com.pablolopezponce.diabetesslm.resources.HttpsClient;
+import com.pablolopezponce.diabetesslm.resources.MyRes;
+import com.pablolopezponce.diabetesslm.setup.SetupActivity;
 
 
 public class AccountSelectActivity extends Activity 

@@ -26,8 +26,8 @@ import com.google.android.gms.auth.GoogleAuthException;
 import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.UserRecoverableAuthException;
 
-import es.pablolopezponce.diabetesslm.resources.HttpsClient;
-import es.pablolopezponce.diabetesslm.resources.MyRes;
+import com.pablolopezponce.diabetesslm.resources.HttpsClient;
+import com.pablolopezponce.diabetesslm.resources.MyRes;
 
 public class ConnectionService extends Service {
 

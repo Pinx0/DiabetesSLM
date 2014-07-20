@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import es.pablolopezponce.diabetesslm.resources.MyRes;
-import es.pablolopezponce.diabetesslm.setup.SetupActivity;
+import com.pablolopezponce.diabetesslm.resources.MyRes;
+import com.pablolopezponce.diabetesslm.setup.SetupActivity;
 
 
 public class MainActivity extends Activity 

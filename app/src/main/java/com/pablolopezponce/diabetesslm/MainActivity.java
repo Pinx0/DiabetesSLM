@@ -11,7 +11,6 @@ import android.os.Bundle;
 import es.pablolopezponce.diabetesslm.resources.MyRes;
 import es.pablolopezponce.diabetesslm.setup.SetupActivity;
 
-
 public class MainActivity extends Activity
 {
     public SharedPreferences savedData;

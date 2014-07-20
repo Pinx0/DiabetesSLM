@@ -29,14 +29,14 @@ public class MainActivity extends Activity
 		finishedSetup = savedData.getBoolean("finishedSetup", false);
 		
 		if(userEmail!=null && finishedSetup) {
-			// Inicializamos la actividad de men� principal porque ya tenemos lo necesario //
+			// Inicializamos la actividad de menú principal porque ya tenemos lo necesario //
 			Intent startMainMenuActivity = new Intent(MainActivity.this, MainMenuActivity.class);
 			startActivity(startMainMenuActivity);
 			this.finish();
 			
-		} else if(userEmail!=null && !finishedSetup) {
+		} else if(userEmail!=null) {
 			
-			// Inicializamos la actividad de setup porque el user no lo acab� de rellenar //
+			// Inicializamos la actividad de setup porque el user no lo acabú de rellenar //
 			Intent startSetupActivity = new Intent(MainActivity.this, SetupActivity.class);
 			startActivity(startSetupActivity);
 			this.finish();

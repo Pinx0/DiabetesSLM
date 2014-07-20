@@ -1,15 +1,16 @@
 package com.pablolopezponce.diabetesslm;
 
-import com.pablolopezponce.diabetesslm.resources.MyRes;
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
-import android.view.View.OnClickListener;
+import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.pablolopezponce.diabetesslm.resources.MyRes;
 
 public class WelcomeActivity extends Activity 
 {
@@ -23,7 +24,7 @@ public class WelcomeActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// Eliminamos el t�tulo de la actividad //
+		// Eliminamos el título de la actividad //
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(R.layout.activity_welcome);
@@ -50,7 +51,7 @@ public class WelcomeActivity extends Activity
 
 	public void initializeVariables() 
 	{
-		// Text View - T�tulo //
+		// Text View - Título //
 		textViewTitle = (TextView) findViewById(R.id.welcome_text_view_title);
 		textViewTitle.setTypeface(MyRes.lightTypeface);
 
@@ -62,7 +63,7 @@ public class WelcomeActivity extends Activity
 		textView2 = (TextView) findViewById(R.id.welcome_text_view_2);
 		textView2.setTypeface(MyRes.lightTypeface);
 
-		// Button - Bot�n de siguiente //
+		// Button - Botín de siguiente //
 		btnNext = (Button) findViewById(R.id.welcome_button_next);
 		btnNext.setTypeface(MyRes.regularTypeface);
 		btnNext.setOnClickListener(raeBtnNext);
@@ -75,12 +76,12 @@ public class WelcomeActivity extends Activity
 		@Override
 		public void onClick(View v) 
 		{
-			// Eliminamos el t�tulo del dialog //
+			// Eliminamos el título del dialog //
 			dialogTOS.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 			dialogTOS.setContentView(R.layout.activity_welcome_tos);
 			
-			// Text View - T�tulo TOS //
+			// Text View - Título TOS //
 			TextView dialogTOSTextViewTitle = (TextView)dialogTOS.findViewById(R.id.welcome_tos_text_view_title);
 			dialogTOSTextViewTitle.setTypeface(MyRes.lightTypeface);
 			
@@ -88,7 +89,7 @@ public class WelcomeActivity extends Activity
 			TextView dialogTOSTextView1 = (TextView)dialogTOS.findViewById(R.id.welcome_tos_text_view_1);
 			dialogTOSTextView1.setTypeface(MyRes.lightTypeface);
 
-			// Button - No aceptar los t�rminos de servicio //
+			// Button - No aceptar los tírminos de servicio //
 			Button dialogTOSButtonDecline = (Button) dialogTOS.findViewById(R.id.welcome_tos_button_decline);
 			dialogTOSButtonDecline.setTypeface(MyRes.regularTypeface);
 			dialogTOSButtonDecline.setOnClickListener(new OnClickListener() 
@@ -100,7 +101,7 @@ public class WelcomeActivity extends Activity
 				}
 			});
 
-			// Button - Aceptar los t�rminos de servicio//
+			// Button - Aceptar los tírminos de servicio//
 			Button dialogTOSButtonAccept = (Button) dialogTOS.findViewById(R.id.welcome_tos_button_accept);
 			dialogTOSButtonAccept.setTypeface(MyRes.regularTypeface);
 			dialogTOSButtonAccept.setOnClickListener(new OnClickListener() 

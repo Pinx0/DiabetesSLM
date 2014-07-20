@@ -1,20 +1,6 @@
 package com.pablolopezponce.diabetesslm;
 
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -34,10 +20,23 @@ import com.google.android.gms.auth.GoogleAuthException;
 import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.common.AccountPicker;
-
 import com.pablolopezponce.diabetesslm.resources.HttpsClient;
 import com.pablolopezponce.diabetesslm.resources.MyRes;
 import com.pablolopezponce.diabetesslm.setup.SetupActivity;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 
 public class AccountSelectActivity extends Activity 
@@ -56,7 +55,7 @@ public class AccountSelectActivity extends Activity
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
-		// Eliminamos el t�tulo de la actividad //
+		// Eliminamos el título de la actividad //
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
 		super.onCreate(savedInstanceState);
@@ -65,10 +64,10 @@ public class AccountSelectActivity extends Activity
 		initializeVariables();
 	}
 
-	// Inicializaci�n de variables //
+	// Inicialización de variables //
 	public void initializeVariables() 
 	{
-		// TextView - T�tulo //
+		// TextView - Título //
 		textViewTitle = (TextView)findViewById(R.id.account_select_text_view_title);
 		textViewTitle.setTypeface(MyRes.lightTypeface);
 		
@@ -81,7 +80,7 @@ public class AccountSelectActivity extends Activity
 		btnChooseAccount.setTypeface(MyRes.regularTypeface);
 		btnChooseAccount.setOnClickListener(raeBtnChooseAccount);
 		
-		// Progress Dialog - Conexi�n con el servidor //
+		// Progress Dialog - Conexión con el servidor //
 		connectionProgress = new ProgressDialog(this);
 		connectionProgress.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		connectionProgress.setCancelable(false);
@@ -89,7 +88,7 @@ public class AccountSelectActivity extends Activity
 		savedData = this.getSharedPreferences(getString(R.string.shared_preferences_key), Context.MODE_PRIVATE);
 	}
 	
-	// Listener del bot�n de selecci�n de cuenta //
+	// Listener del botín de selección de cuenta //
 	public OnClickListener raeBtnChooseAccount = new OnClickListener() 
 	{
 		@Override
@@ -99,7 +98,7 @@ public class AccountSelectActivity extends Activity
 		}
 	};
 
-	// Inicializaci�n del selector de cuenta //
+	// Inicializaciín del selector de cuenta //
 	private void showGoogleAccountPicker() 
 	{
 		String[] accounts = new String[] { GoogleAuthUtil.GOOGLE_ACCOUNT_TYPE };
@@ -118,7 +117,7 @@ public class AccountSelectActivity extends Activity
 		}
 	}
 
-	// Hilo que se encarga de realizar la conexi�n con el servidor //
+	// Hilo que se encarga de realizar la conexiín con el servidor //
 	private class getTokenAsync extends AsyncTask<String, Void, String> 
 	{
 		private static final int REQUEST_AUTHORIZATION = 0;
@@ -132,7 +131,7 @@ public class AccountSelectActivity extends Activity
 		@Override
 		protected String doInBackground(String... userEmail) 
 		{
-			MyRes.userEmail = (String) userEmail[0];
+			MyRes.userEmail = userEmail[0];
 			String mScope = getString(R.string.oauth_scope);
 			String token = "";
 			String response = "";
@@ -184,7 +183,7 @@ public class AccountSelectActivity extends Activity
 				ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 				nameValuePairs.add(new BasicNameValuePair("mToken", token));
 				
-				// No se si deber�amos cambiar el nombre de la variable mEmail //
+				// No se si deberíamos cambiar el nombre de la variable mEmail //
 				nameValuePairs.add(new BasicNameValuePair("mEmail", MyRes.userEmail));
 				
 				try 
@@ -198,7 +197,7 @@ public class AccountSelectActivity extends Activity
 					
 					BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"));
 					StringBuilder builder = new StringBuilder();
-					for (String line = null; (line = reader.readLine()) != null;) {
+					for (String line; (line = reader.readLine()) != null;) {
 					    builder.append(line).append("\n");
 					}
 					JSONTokener tokener = new JSONTokener(builder.toString());

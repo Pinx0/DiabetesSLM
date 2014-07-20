@@ -18,7 +18,7 @@ public class SetupActivity extends FragmentActivity
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
-		// Eliminamos el t�tulo de la actividad //
+		// Eliminamos el título de la actividad //
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 		
 		super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class SetupActivity extends FragmentActivity
 
 	public void initializeVariables() 
 	{
-		// Inicializaci�n del View Pager //
+		// Inicialización del View Pager //
 		this.pager = (ViewPager) findViewById(R.id.pager);
 		this.pager.setPageTransformer(true, new ZoomOutPageTransformer());
 

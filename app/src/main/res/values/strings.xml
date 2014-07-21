@@ -3,6 +3,8 @@
 
     <string name="app_name">Diabetes SLM</string>
     <string name="button_next">Next</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_finish">Finish</string>
 
     <!-- Welcome Activity -->
     <string name="welcome_text_view_title">Welcome!</string>

@@ -1,5 +1,6 @@
 package com.pablolopezponce.diabetesslm.setup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.RadioButton;
+
+import com.pablolopezponce.diabetesslm.MainMenuActivity;
 import com.pablolopezponce.diabetesslm.R;
 
 public class SetupActivity extends FragmentActivity 
@@ -90,4 +93,11 @@ public class SetupActivity extends FragmentActivity
 	{
 		pager.setCurrentItem(pager.getCurrentItem() - 1);
 	}
+
+    public void finishSetup(View view)
+    {
+        Intent finishSetupIntent = new Intent(this, MainMenuActivity.class);
+        startActivity(finishSetupIntent);
+
+    }
 }

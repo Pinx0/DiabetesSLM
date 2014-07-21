@@ -40,10 +40,652 @@
                     android:gravity="left"
                     android:layout_marginTop="24dp"
                     android:layout_below="@+id/setup_fragment_3_text_view_title"
-                    android:text="Bomba"
+                    android:text="Please tell us how much basal insulin does your pump use each hour of the day."
                     android:textColor="@color/dark_grey_text"
                     android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_text_view_1"
+                android:text="0.00 - 1.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_1"
+                android:layout_below="@+id/setup_fragment_3_text_view_2"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_1"
+                android:text="1.00 - 2.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_2"
+                android:layout_below="@+id/setup_fragment_3_text_view_3"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_2"
+                android:text="2.00 - 3.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_3"
+                android:layout_below="@+id/setup_fragment_3_text_view_4"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_3"
+                android:text="3.00 - 4.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_4"
+                android:layout_below="@+id/setup_fragment_3_text_view_5"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_4"
+                android:text="4.00 - 5.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_5"
+                android:layout_below="@+id/setup_fragment_3_text_view_6"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_5"
+                android:text="5.00 - 6.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_6"
+                android:layout_below="@+id/setup_fragment_3_text_view_7"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_6"
+                android:text="6.00 - 7.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_7"
+                android:layout_below="@+id/setup_fragment_3_text_view_8"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_7"
+                android:text="7.00 - 8.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_8"
+                android:layout_below="@+id/setup_fragment_3_text_view_9"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_8"
+                android:text="8.00 - 9.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_9"
+                android:layout_below="@+id/setup_fragment_3_text_view_10"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_9"
+                android:text="9.00 - 10.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_10"
+                android:layout_below="@+id/setup_fragment_3_text_view_11"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_10"
+                android:text="10.00 - 11.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_11"
+                android:layout_below="@+id/setup_fragment_3_text_view_12"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_11"
+                android:text="11.00 - 12.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_12"
+                android:layout_below="@+id/setup_fragment_3_text_view_13"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+            android:id="@+id/setup_fragment_3_text_view_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="left"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/setup_fragment_3_edit_text_12"
+            android:text="12.00 - 13.00"
+            android:textColor="@color/dark_grey_text"
+            android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_13"
+                android:layout_below="@+id/setup_fragment_3_text_view_14"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_13"
+                android:text="13.00 - 14.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_14"
+                android:layout_below="@+id/setup_fragment_3_text_view_15"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_14"
+                android:text="14.00 - 15.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_15"
+                android:layout_below="@+id/setup_fragment_3_text_view_16"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_15"
+                android:text="15.00 - 16.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_16"
+                android:layout_below="@+id/setup_fragment_3_text_view_17"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_16"
+                android:text="16.00 - 17.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_17"
+                android:layout_below="@+id/setup_fragment_3_text_view_18"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_17"
+                android:text="17.00 - 18.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_18"
+                android:layout_below="@+id/setup_fragment_3_text_view_19"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_18"
+                android:text="18.00 - 19.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_19"
+                android:layout_below="@+id/setup_fragment_3_text_view_20"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_19"
+                android:text="19.00 - 20.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_20"
+                android:layout_below="@+id/setup_fragment_3_text_view_21"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_20"
+                android:text="20.00 - 21.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_21"
+                android:layout_below="@+id/setup_fragment_3_text_view_22"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_21"
+                android:text="21.00 - 22.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_22"
+                android:layout_below="@+id/setup_fragment_3_text_view_23"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_22"
+                android:text="22.00 - 23.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_23"
+                android:layout_below="@+id/setup_fragment_3_text_view_24"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_3_text_view_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_3_edit_text_23"
+                android:text="23.00 - 0.00"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_3_edit_text_24"
+                android:layout_below="@+id/setup_fragment_3_text_view_25"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
                                 				
 		</RelativeLayout>
 		

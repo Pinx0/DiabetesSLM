@@ -40,12 +40,128 @@
                     android:gravity="left"
                     android:layout_marginTop="24dp"
                     android:layout_below="@+id/setup_fragment_5_text_view_title"
-                    android:text="5"
+                    android:text="Please now tell us how much insuline do you need per each 10g of carbohydrate during the day."
                     android:textColor="@color/dark_grey_text"
                     android:textSize="16sp" />
 
-                                				
-		</RelativeLayout>
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_5_text_view_1"
+                android:text="Breakfast"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:text=" (units per 10g carbohydrates):"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignTop="@+id/setup_fragment_5_text_view_2"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/setup_fragment_5_text_view_2" />
+
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/setup_fragment_5_edit_text_1"
+                    android:layout_marginTop="24dp"
+                    android:layout_alignTop="@+id/setup_fragment_5_text_view_3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_5_edit_text_1"
+                android:text="Lunch"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:text=" (units per 10g carbohydrates):"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignTop="@+id/setup_fragment_5_text_view_4"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/setup_fragment_5_text_view_4" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/setup_fragment_5_edit_text_2"
+                android:layout_marginTop="24dp"
+                android:layout_alignTop="@+id/setup_fragment_5_text_view_5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_5_edit_text_2"
+                android:text="Dinner"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setup_fragment_5_text_view_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:text=" (units per 10g carbohydrates):"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignTop="@+id/setup_fragment_5_text_view_6"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/setup_fragment_5_text_view_6" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/setup_fragment_5_edit_text_3"
+                android:layout_marginTop="24dp"
+                android:layout_alignTop="@+id/setup_fragment_5_text_view_6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
 		
 	</ScrollView>
 	

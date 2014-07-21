@@ -93,15 +93,15 @@ public class WelcomeActivity extends Activity
 			TextView dialogTOSTextView1 = (TextView)dialogTOS.findViewById(R.id.welcome_tos_text_view_1);
 			dialogTOSTextView1.setTypeface(MyRes.lightTypeface);
 
-			// Button - No aceptar los tírminos de servicio //
+			// Button - No aceptar los términos de servicio //
 			Button dialogTOSButtonDecline = (Button) dialogTOS.findViewById(R.id.welcome_tos_button_decline);
 			dialogTOSButtonDecline.setTypeface(MyRes.regularTypeface);
 			dialogTOSButtonDecline.setOnClickListener(new OnClickListener() 
 			{
 				@Override
-				public void onClick(View v) 
+				public void onClick(View v)
 				{
-					dialogTOS.dismiss();
+					dialogTOS.hide();
 				}
 			});
 

@@ -72,13 +72,13 @@ public class SetupActivity extends FragmentActivity
 		// Check which radio button was clicked
 		switch (view.getId()) 
 		{
-		case R.id.setup_fragment_2_pump:
+		case R.id.setup_fragment_2_radio_button_pump:
 			if (checked) 
 			{
 				pagerAdapter.replaceFromFragment(2, new SetupFragment3());
 			}
 			break;
-		case R.id.setup_fragment_2_pen:
+		case R.id.setup_fragment_2_radio_button_pen:
 			if (checked) 
 			{
 				pagerAdapter.replaceFromFragment(2, new SetupFragment4());

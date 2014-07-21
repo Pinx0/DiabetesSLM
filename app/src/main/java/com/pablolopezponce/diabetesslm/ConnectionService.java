@@ -67,7 +67,6 @@ public class ConnectionService extends Service {
     			try {
     				while(keepActive) {
     					Thread.sleep(15000);
-    				//	handler.post(syncData);
                         String userEmail = savedData.getString("userEmail", null);
                         String mScope = getString(R.string.oauth_scope);
                         String token = null;

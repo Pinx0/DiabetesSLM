@@ -18,19 +18,19 @@ public class SetupPagerAdapter extends FragmentStatePagerAdapter
 		this.fragments = new ArrayList<Fragment>();
 	}
 	
-	// A�adir un fragmento en la posicion deseada //
+	// Añadir un fragmento en la posicion deseada //
 	public void addFragment(int position, Fragment fragment)
 	{
-		fragments.add(position, fragment);
+        fragments.add(position, fragment);
 	}
 	
-	// A�adir un fragmento //
+	// Añadir un fragmento //
 	public void addFragment(Fragment fragment)
 	{
 		fragments.add(fragment);
 	}
 	
-	// Cambia los views dependiendo de la opci�n que escoja el usuario //
+	// Cambia los views dependiendo de la opción que escoja el usuario //
 	public void replaceFromFragment(int position, Fragment fragment)
 	{
 		if(getCount()>=position+1)

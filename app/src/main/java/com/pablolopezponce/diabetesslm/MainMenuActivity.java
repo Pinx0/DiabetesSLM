@@ -36,6 +36,7 @@ public class MainMenuActivity extends Activity {
         if (mBound) {
         	unbindService(mConnection);
             mBound = false;
+            stopService(new Intent(this, ConnectionService.class));
         }
     }
 

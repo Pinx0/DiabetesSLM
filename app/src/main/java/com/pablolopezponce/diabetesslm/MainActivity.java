@@ -18,8 +18,6 @@ public class MainActivity extends Activity
 	private String userEmail;
 	private boolean finishedSetup;
 
-    // Test
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -55,6 +53,4 @@ public class MainActivity extends Activity
 		// Typeface - Regular //
 		MyRes.regularTypeface = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");		
 	}
-	
-
 }

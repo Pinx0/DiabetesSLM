@@ -3,5 +3,5 @@
 /.idea/workspace.xml
 .DS_Store
 /build
-/app.iml
+app/app.iml
 /app/src/main/res/values/secure_strings.xml

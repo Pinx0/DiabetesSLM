@@ -1,12 +1,13 @@
 package com.pablolopezponce.diabetesslm.setup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.RadioButton;
 
 import com.pablolopezponce.diabetesslm.MainMenuActivity;
@@ -16,7 +17,7 @@ public class SetupActivity extends FragmentActivity
 {
 	public ViewPager pager = null;
 	public SetupPagerAdapter pagerAdapter;
-	public Button btnNextFrag1, btnNextFrag2, btnNextFrag3, btnNextFrag4, btnNextFrag5, btnNextFrag6, btnNextFrag7; 
+    public SharedPreferences savedData;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -43,6 +44,8 @@ public class SetupActivity extends FragmentActivity
 
 		// Asociamos el View Pager con el adaptador //
 		this.pager.setAdapter(pagerAdapter);
+
+        savedData = this.getSharedPreferences(getString(R.string.shared_preferences_key), Context.MODE_PRIVATE);
 		
 	}
 	
@@ -96,8 +99,9 @@ public class SetupActivity extends FragmentActivity
 
     public void finishSetup(View view)
     {
+        savedData.edit().putBoolean("finishedSetup", true).commit();
         Intent finishSetupIntent = new Intent(this, MainMenuActivity.class);
         startActivity(finishSetupIntent);
-
+        this.finish();
     }
 }

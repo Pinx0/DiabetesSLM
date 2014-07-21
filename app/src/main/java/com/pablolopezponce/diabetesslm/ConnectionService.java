@@ -1,18 +1,5 @@
 package com.pablolopezponce.diabetesslm;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -25,9 +12,21 @@ import android.util.Log;
 import com.google.android.gms.auth.GoogleAuthException;
 import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.UserRecoverableAuthException;
-
 import com.pablolopezponce.diabetesslm.resources.HttpsClient;
 import com.pablolopezponce.diabetesslm.resources.MyRes;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class ConnectionService extends Service {
 
@@ -86,7 +85,7 @@ public class ConnectionService extends Service {
 	    	
 	    	String userEmail = savedData.getString("userEmail", null);
 			String mScope = getString(R.string.oauth_scope);
-			String token = "";
+			String token = null;
 			String response = "";
 
 			try 
@@ -107,6 +106,7 @@ public class ConnectionService extends Service {
 				// to arrange for that. But we only want to do this once.
 				// Multiple
 				// attempts probably mean the user said no.
+                Log.i(MyRes.TAG, "You have denied permission");
 				response = "You have denied permission";
 
 			} 
@@ -116,13 +116,16 @@ public class ConnectionService extends Service {
 				// high-traffic and you can't count on 100% success. But it
 				// would be
 				// bad to retry instantly, so back off
+                Log.i(MyRes.TAG, "No response from authorization server. ");
 				response = "No response from authorization server.";
 			} 
 			catch (GoogleAuthException fatalAuthEx) 
 			{
+                Log.i(MyRes.TAG, "Fatal auth error: " + fatalAuthEx.getLocalizedMessage());
 				response = "Fatal authorization exception: " + fatalAuthEx.getLocalizedMessage();
 			}
 			catch (Exception e) {
+                Log.i(MyRes.TAG, "Exception");
 				e.printStackTrace();
 			}
 			

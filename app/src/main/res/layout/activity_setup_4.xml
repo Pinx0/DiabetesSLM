@@ -40,12 +40,39 @@
                     android:gravity="left"
                     android:layout_marginTop="24dp"
                     android:layout_below="@+id/setup_fragment_4_text_view_title"
-                    android:text="LapizpenePenparati"
+                    android:text="Please tell us how much basal insulin (Lantus or similar do you use during a full day (each 24h)."
                     android:textColor="@color/dark_grey_text"
                     android:textSize="16sp" />
 
-                                				
-		</RelativeLayout>
+            <TextView
+                android:id="@+id/setup_fragment_4_text_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_4_text_view_1"
+                android:text="Basal dose in units:"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_4_edit_text_1"
+                android:layout_below="@+id/setup_fragment_4_text_view_2"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
 		
 	</ScrollView>
 	
@@ -79,5 +106,5 @@
                 android:onClick="nextPage" />
             
     </LinearLayout>
-    
+
 </RelativeLayout>

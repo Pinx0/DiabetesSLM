@@ -29,20 +29,58 @@
                     android:text="@string/setup_text_view_title"
                     android:textColor="@color/light_blue_text"
                     android:textSize="35sp" />
-  		    
-  		    
-                <TextView
-                    android:id="@+id/setup_fragment_6_text_view_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="left"
-                    android:layout_marginTop="24dp"
-                    android:layout_below="@+id/setup_fragment_6_text_view_title"
-                    android:text="6"
-                    android:textColor="@color/dark_grey_text"
-                    android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/setup_fragment_6_text_view_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_6_text_view_title"
+                android:text="Please tell us how much does your sugar blood level decrease per each unit of rapid insulin."
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setup_fragment_6_text_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/setup_fragment_6_text_view_1"
+                android:text="Correction factor"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/setup_fragment_6_text_view_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:text=" (mg/dl per insulin unit):"
+                android:textColor="@color/dark_grey_text"
+                android:textSize="16sp"
+                android:layout_alignTop="@+id/setup_fragment_6_text_view_2"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/setup_fragment_6_text_view_2" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/setup_fragment_6_edit_text_1"
+                android:layout_marginTop="24dp"
+                android:layout_alignTop="@+id/setup_fragment_6_text_view_3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
                                 				
 		</RelativeLayout>

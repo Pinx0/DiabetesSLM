@@ -6,7 +6,8 @@
     <ScrollView
 	  android:layout_width="match_parent"
 	  android:layout_height="match_parent"
-	  android:layout_marginBottom="50dp">
+	  android:layout_marginBottom="50dp"
+        android:id="@+id/scrollView">
 	  
   	<RelativeLayout
 		    android:layout_width="match_parent"
@@ -28,8 +29,54 @@
                     android:text="@string/setup_text_view_title"
                     android:textColor="@color/dark_blue"
                     android:textSize="35sp" />
-                                				
-		</RelativeLayout>
+
+               <TextView
+                    android:id="@+id/setup_fragment_1_text_view_intro"
+                    style="@style/content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/setup_fragment_1_text_view_title"
+                    android:layout_marginTop="24dp"
+                    android:text="Intro" />
+
+               <TextView
+                    android:id="@+id/setup_fragment_1_text_view_sex"
+                    style="@style/content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/setup_fragment_1_text_view_intro"
+                    android:layout_marginTop="24dp"
+                    android:text="Unit system" />
+
+               <RadioGroup
+                    android:id="@+id/setup_fragment_1_radio_group_unit_system"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/setup_fragment_1_text_view_sex"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/setup_fragment_radio_button_imperial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        style="@style/content_text_radio_buttons"
+                        android:text="Imperial system"
+                        android:layout_marginTop="12dp"/>
+
+                    <RadioButton
+                        android:id="@+id/setup_fragment_radio_button_metric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        style="@style/content_text_radio_buttons"
+                        android:text="Metric system" />
+
+               </RadioGroup>
+
+    </RelativeLayout>
 		
 	</ScrollView>
 	
@@ -63,5 +110,5 @@
                 android:onClick="nextPage" />
             
     </LinearLayout>
-    
+
 </RelativeLayout>

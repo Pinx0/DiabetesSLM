@@ -27,29 +27,132 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/setup_text_view_title"
-                android:textColor="@color/light_blue_text"
+                android:textColor="@color/dark_blue"
                 android:textSize="35sp" />
 
+            <TextView
+                android:id="@+id/setup_fragment_2_text_view_intro"
+                style="@style/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/setup_fragment_2_text_view_title"
+                android:layout_marginTop="24dp"
+                android:text="Intro" />
+
+            <TextView
+                android:id="@+id/setup_fragment_2_text_view_age"
+                style="@style/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/setup_fragment_2_text_view_intro"
+                android:layout_marginTop="24dp"
+                android:text="Age" />
+
+            <EditText
+                android:id="@+id/setup_fragment_2_edit_text_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="test"
+                android:layout_toEndOf="@+id/setup_fragment_2_text_view_age"
+                android:layout_below="@+id/setup_fragment_2_text_view_age"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_2_text_view_sex"
+                style="@style/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/setup_fragment_2_edit_text_age"
+                android:layout_marginTop="24dp"
+                android:text="Sex" />
+
             <RadioGroup
+                android:id="@+id/setup_fragment_2_radio_group_sex"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/setup_fragment_2_text_view_title"
+                android:layout_below="@+id/setup_fragment_2_text_view_sex"
                 android:orientation="vertical">
 
                 <RadioButton
-                    android:id="@+id/setup_fragment_2_pump"
+                    android:id="@+id/setup_fragment_2_radio_button_man"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:text="Bomba" />
+                    style="@style/content_text_radio_buttons"
+                    android:text="Man"
+                    android:layout_marginTop="12dp"/>
 
                 <RadioButton
-                    android:id="@+id/setup_fragment_2_pen"
+                    android:id="@+id/setup_fragment_2_radio_button_woman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
+                    style="@style/content_text_radio_buttons"
+                    android:text="Woman" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/setup_fragment_2_text_view_height"
+                style="@style/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/setup_fragment_2_radio_group_sex"
+                android:layout_marginTop="24dp"
+                android:text="Age" />
+
+            <EditText
+                android:id="@+id/setup_fragment_2_edit_text_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="test 1"
+                style="@style/content_text"
+                android:layout_toEndOf="@+id/setup_fragment_2_text_view_height"
+                android:layout_below="@+id/setup_fragment_2_text_view_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/setup_fragment_2_text_view_injection"
+                style="@style/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/setup_fragment_2_edit_text_height"
+                android:layout_marginTop="24dp"
+                android:text="Injection system" />
+
+            <RadioGroup
+                android:id="@+id/setup_radio_group_injection"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setup_fragment_2_text_view_injection"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/setup_fragment_2_radio_button_pump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    style="@style/content_text_radio_buttons"
+                    android:text="Bomba"
+                    android:layout_marginTop="12dp"/>
+
+                <RadioButton
+                    android:id="@+id/setup_fragment_2_radio_button_pen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    style="@style/content_text_radio_buttons"
                     android:text="Bolígrafo" />
-                
+
             </RadioGroup>
             
         </RelativeLayout>

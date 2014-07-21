@@ -34,8 +34,8 @@ public class MainActivity extends Activity
 			startActivity(startMainMenuActivity);
 			this.finish();
 			
-		} else if(userEmail!=null) {
-			
+		} else if(userEmail!=null&&1==2) {
+
 			// Inicializamos la actividad de setup porque el user no lo acabú de rellenar //
 			Intent startSetupActivity = new Intent(MainActivity.this, SetupActivity.class);
 			startActivity(startSetupActivity);
@@ -47,7 +47,7 @@ public class MainActivity extends Activity
 			Intent startWelcomeActivity = new Intent(MainActivity.this, WelcomeActivity.class);
 			startActivity(startWelcomeActivity);
 			this.finish();
-		} 
+		}
 		
 		// Typeface - Light //
 		MyRes.lightTypeface = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");

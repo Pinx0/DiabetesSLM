@@ -88,7 +88,7 @@ public class AccountSelectActivity extends Activity
 		savedData = this.getSharedPreferences(getString(R.string.shared_preferences_key), Context.MODE_PRIVATE);
 	}
 	
-	// Listener del botín de selección de cuenta //
+	// Listener del botón de selección de cuenta //
 	public OnClickListener raeBtnChooseAccount = new OnClickListener() 
 	{
 		@Override
@@ -98,7 +98,7 @@ public class AccountSelectActivity extends Activity
 		}
 	};
 
-	// Inicializaciín del selector de cuenta //
+	// Inicialización del selector de cuenta //
 	private void showGoogleAccountPicker() 
 	{
 		String[] accounts = new String[] { GoogleAuthUtil.GOOGLE_ACCOUNT_TYPE };
@@ -133,7 +133,7 @@ public class AccountSelectActivity extends Activity
 		{
 			MyRes.userEmail = userEmail[0];
 			String mScope = getString(R.string.oauth_scope);
-			String token = "";
+			String token = null;
 			String response = "";
 
 			try 
@@ -168,7 +168,7 @@ public class AccountSelectActivity extends Activity
 			} 
 			catch (GoogleAuthException fatalAuthEx) 
 			{
-				Log.d(MyRes.TAG, "Fatal Authorization Exception");
+				Log.d(MyRes.TAG, "Fatal Authorization Exception: " + fatalAuthEx.getLocalizedMessage());
 				response = "Fatal authorization exception: " + fatalAuthEx.getLocalizedMessage();
 			}
 			

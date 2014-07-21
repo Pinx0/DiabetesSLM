@@ -60,7 +60,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_1"
                 android:layout_below="@+id/setup_fragment_3_text_view_2"
@@ -87,7 +87,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_2"
                 android:layout_below="@+id/setup_fragment_3_text_view_3"
@@ -114,7 +114,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_3"
                 android:layout_below="@+id/setup_fragment_3_text_view_4"
@@ -140,7 +140,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_4"
                 android:layout_below="@+id/setup_fragment_3_text_view_5"
@@ -166,7 +166,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_5"
                 android:layout_below="@+id/setup_fragment_3_text_view_6"
@@ -193,7 +193,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_6"
                 android:layout_below="@+id/setup_fragment_3_text_view_7"
@@ -220,7 +220,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_7"
                 android:layout_below="@+id/setup_fragment_3_text_view_8"
@@ -247,7 +247,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_8"
                 android:layout_below="@+id/setup_fragment_3_text_view_9"
@@ -274,7 +274,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_9"
                 android:layout_below="@+id/setup_fragment_3_text_view_10"
@@ -300,7 +300,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_10"
                 android:layout_below="@+id/setup_fragment_3_text_view_11"
@@ -326,7 +326,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_11"
                 android:layout_below="@+id/setup_fragment_3_text_view_12"
@@ -353,7 +353,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_12"
                 android:layout_below="@+id/setup_fragment_3_text_view_13"
@@ -380,7 +380,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_13"
                 android:layout_below="@+id/setup_fragment_3_text_view_14"
@@ -407,7 +407,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_14"
                 android:layout_below="@+id/setup_fragment_3_text_view_15"
@@ -434,7 +434,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_15"
                 android:layout_below="@+id/setup_fragment_3_text_view_16"
@@ -461,7 +461,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_16"
                 android:layout_below="@+id/setup_fragment_3_text_view_17"
@@ -488,7 +488,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_17"
                 android:layout_below="@+id/setup_fragment_3_text_view_18"
@@ -515,7 +515,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_18"
                 android:layout_below="@+id/setup_fragment_3_text_view_19"
@@ -542,7 +542,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_19"
                 android:layout_below="@+id/setup_fragment_3_text_view_20"
@@ -569,7 +569,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_20"
                 android:layout_below="@+id/setup_fragment_3_text_view_21"
@@ -596,7 +596,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_21"
                 android:layout_below="@+id/setup_fragment_3_text_view_22"
@@ -623,7 +623,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_22"
                 android:layout_below="@+id/setup_fragment_3_text_view_23"
@@ -649,7 +649,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_23"
                 android:layout_below="@+id/setup_fragment_3_text_view_24"
@@ -676,7 +676,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/setup_fragment_3_edit_text_24"
                 android:layout_below="@+id/setup_fragment_3_text_view_25"

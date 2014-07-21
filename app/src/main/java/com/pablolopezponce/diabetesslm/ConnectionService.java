@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Binder;
-import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -20,6 +19,7 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
@@ -30,8 +30,6 @@ import java.util.ArrayList;
 
 public class ConnectionService extends Service {
 
-	protected static final String REQUEST_AUTHORIZATION = null;
-	final Handler handler = new Handler();
 	// Binder given to clients
     private final IBinder mBinder = new LocalBinder();
     
@@ -69,7 +67,96 @@ public class ConnectionService extends Service {
     			try {
     				while(keepActive) {
     					Thread.sleep(15000);
-    					handler.post(syncData);
+    				//	handler.post(syncData);
+                        String userEmail = savedData.getString("userEmail", null);
+                        String mScope = getString(R.string.oauth_scope);
+                        String token = null;
+                        String response;
+
+		/*	VOLVER A CONSEGUIR EL TOKEN */
+
+		try
+			{
+				// if this returns, the OAuth framework thinks the token should
+				// be usable
+				token = GoogleAuthUtil.getToken(ConnectionService.this, userEmail, mScope);
+
+			}
+
+			catch (UserRecoverableAuthException userAuthEx)
+			{
+				// This means that the app hasn't been authorized by the user
+				// for access
+				// to the scope, so we're going to have to fire off the
+				// (provided) Intent
+				// to arrange for that. But we only want to do this once.
+				// Multiple
+				// attempts probably mean the user said no.
+
+				response = "You have denied permission";
+                Log.i(MyRes.TAG, response);
+
+			}
+			catch (IOException ioEx)
+			{
+				// Something is stressed out; the auth servers are by definition
+				// high-traffic and you can't count on 100% success. But it
+				// would be
+				// bad to retry instantly, so back off
+				response = "No response from authorization server.";
+                Log.i(MyRes.TAG, response);
+			}
+			catch (GoogleAuthException fatalAuthEx)
+			{
+				response = "Fatal authorization exception: " + fatalAuthEx.getLocalizedMessage();
+                Log.i(MyRes.TAG, response);
+			}
+			catch (Exception e) {
+                Log.i(MyRes.TAG, "Exception");
+				e.printStackTrace();
+			}
+
+                        if (token != null)
+                        {
+                            Log.i(MyRes.TAG, "Token: " + token);
+
+                            savedData.edit().putString("userEmail", userEmail).commit();
+                            savedData.edit().putString("token", token).commit();
+
+                            HttpPost httppost = new HttpPost(getString(R.string.url));
+                            ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                            nameValuePairs.add(new BasicNameValuePair("mToken", token));
+
+                            // No se si deberíamos cambiar el nombre de la variable mEmail //
+                            nameValuePairs.add(new BasicNameValuePair("mEmail", userEmail));
+
+                            try
+                            {
+                                DefaultHttpClient httpclient = new HttpsClient(getApplicationContext());
+                                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                                // Execute HTTP Post Request
+                                //ResponseHandler<String> responseHandler = new BasicResponseHandler();
+                                HttpResponse httpResponse = httpclient.execute(httppost);
+
+                                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"));
+                                StringBuilder builder = new StringBuilder();
+                                for (String line; (line = reader.readLine()) != null;) {
+                                    builder.append(line).append("\n");
+                                }
+                                JSONTokener tokener = new JSONTokener(builder.toString());
+
+                                JSONObject object = (JSONObject) tokener.nextValue();
+                                response = object.getString("status");
+                                Log.i("--->", "status: " + response);
+
+                            } catch (Exception e)
+                            {
+                                response = "Error in http connection " + e.toString();
+                                Log.i(MyRes.TAG, response);
+                            }
+
+                        }
     				}
     				
     			} catch(InterruptedException e) {
@@ -80,96 +167,4 @@ public class ConnectionService extends Service {
     	};
     	t.start();
     }
-	private Runnable syncData = new Runnable(){
-	    public void run(){
-	    	
-	    	String userEmail = savedData.getString("userEmail", null);
-			String mScope = getString(R.string.oauth_scope);
-			String token = null;
-			String response = "";
-
-			try 
-			{
-				// if this returns, the OAuth framework thinks the token should
-				// be usable
-				token = GoogleAuthUtil.getToken(ConnectionService.this, userEmail, mScope);
-
-			}
-			
-			catch (UserRecoverableAuthException userAuthEx) 
-			{
-				// TRADUCIR //
-				// This means that the app hasn't been authorized by the user
-				// for access
-				// to the scope, so we're going to have to fire off the
-				// (provided) Intent
-				// to arrange for that. But we only want to do this once.
-				// Multiple
-				// attempts probably mean the user said no.
-                Log.i(MyRes.TAG, "You have denied permission");
-				response = "You have denied permission";
-
-			} 
-			catch (IOException ioEx) 
-			{
-				// Something is stressed out; the auth servers are by definition
-				// high-traffic and you can't count on 100% success. But it
-				// would be
-				// bad to retry instantly, so back off
-                Log.i(MyRes.TAG, "No response from authorization server. ");
-				response = "No response from authorization server.";
-			} 
-			catch (GoogleAuthException fatalAuthEx) 
-			{
-                Log.i(MyRes.TAG, "Fatal auth error: " + fatalAuthEx.getLocalizedMessage());
-				response = "Fatal authorization exception: " + fatalAuthEx.getLocalizedMessage();
-			}
-			catch (Exception e) {
-                Log.i(MyRes.TAG, "Exception");
-				e.printStackTrace();
-			}
-			
-			if (token != null) 
-			{
-				Log.i(MyRes.TAG, "Token: " + token);
-				
-				savedData.edit().putString("userEmail", userEmail).commit();
-				savedData.edit().putString("token", token).commit();
-				
-				HttpPost httppost = new HttpPost(getString(R.string.url));
-				ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-				
-				try 
-				{
-					DefaultHttpClient httpclient = new HttpsClient(getApplicationContext());
-					httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-					// Execute HTTP Post Request
-					//ResponseHandler<String> responseHandler = new BasicResponseHandler();
-					HttpResponse httpResponse = httpclient.execute(httppost);
-					
-					BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent(), "UTF-8"));
-					StringBuilder builder = new StringBuilder();
-					for (String line = null; (line = reader.readLine()) != null;) {
-					    builder.append(line).append("\n");
-					}
-					JSONTokener tokener = new JSONTokener(builder.toString());
-					
-					JSONObject object = (JSONObject) tokener.nextValue();
-					response = object.getString("status");
-					Log.i("--->", "" + response);
-
-				} catch (Exception e) 
-				{
-					Log.e(MyRes.TAG, "Error in http connection " + e.toString());
-					response = "Error in http connection " + e.toString();
-				}
-
-			}
-
-	    	
-	    }
-	};
-	
-
 }

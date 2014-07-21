@@ -67,15 +67,19 @@ public class WelcomeActivity extends Activity
 		btnNext = (Button) findViewById(R.id.welcome_button_next);
 		btnNext.setTypeface(MyRes.regularTypeface);
 		btnNext.setOnClickListener(raeBtnNext);
-		
-		// Dialog - TOS //
-		dialogTOS = new Dialog(this);
+
+        // Dialog - TOS //
+        dialogTOS = new Dialog(WelcomeActivity.this);
 	}
 
 	public OnClickListener raeBtnNext = new OnClickListener() {
 		@Override
 		public void onClick(View v) 
 		{
+
+            // Dialog - TOS //
+            dialogTOS = new Dialog(WelcomeActivity.this);
+
 			// Eliminamos el título del dialog //
 			dialogTOS.requestWindowFeature(Window.FEATURE_NO_TITLE);
 

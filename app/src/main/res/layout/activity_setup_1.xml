@@ -152,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/grey_bottom_buttons"
                 android:text="@string/button_next"
-                android:onClick="nextPage" />
+                android:onClick="nextPage1" />
             
     </LinearLayout>
 

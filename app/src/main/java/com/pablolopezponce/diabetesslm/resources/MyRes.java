@@ -20,8 +20,8 @@ public class MyRes extends Application
     public static void saveSettingsDate(Context context)
     {
         long unixTime = System.currentTimeMillis() / 1000L;
+        /* Pendiente de corregir string */
         savedData = context.getSharedPreferences("com.pablolopezponce.diabetesslm.savedata", context.MODE_PRIVATE);
         savedData.edit().putLong("settingsTime", unixTime).commit();
-        Log.i(TAG, "" + savedData.getLong("settingsTime", 0));
     }
 }

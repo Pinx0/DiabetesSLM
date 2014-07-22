@@ -89,12 +89,25 @@ public class SetupActivity extends FragmentActivity
 		}
 	}
 
+    public boolean isRadioButtonChecked (View view)
+    {
+        boolean checked = ((RadioButton) view).isChecked();
+        return checked;
+    }
+
 	public void nextPage(View view)
     {
-        Log.i(MyRes.TAG, "Ola k ase");
         MyRes.saveSettingsDate(this);
 		pager.setCurrentItem(pager.getCurrentItem() + 1);
 	}
+
+    public void nextPage1 (View view)
+    {
+        boolean unitSystem = isRadioButtonChecked(this.findViewById(R.id.setup_fragment_radio_button_imperial));
+        savedData.edit().putBoolean("unitSystem", unitSystem);
+        Log.i(MyRes.TAG, "" + savedData.getBoolean("unitSystem", false));
+        nextPage(view);
+    }
 
 	public void previousPage(View view)
 	{

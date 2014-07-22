@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.RadioButton;
@@ -102,10 +103,21 @@ public class SetupActivity extends FragmentActivity
 
     public void nextPage1 (View view)
     {
-         boolean unitSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_radio_button_imperial));
+        boolean unitSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_radio_button_imperial));
         boolean sugarBloodUnit = isRadioButtonChecked(findViewById(R.id.setup_fragment_radio_button_mmoll));
         savedData.edit().putBoolean("unitSystem", unitSystem).commit();
         savedData.edit().putBoolean("sugarBloodUnit", sugarBloodUnit).commit();
+        nextPage(view);
+    }
+
+    public void nextPage2 (View view)
+    {
+        boolean injectionSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_pen));
+        boolean genre = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_woman));
+        savedData.edit().putBoolean("injectionSystem", injectionSystem).commit();
+        savedData.edit().putBoolean("genre", genre).commit();
+        Log.i(MyRes.TAG, "" + Integer.parseInt(findViewById(R.id.setup_fragment_2_edit_text_age).toString()));
+        savedData.edit().putInt("age", Integer.parseInt(findViewById(R.id.setup_fragment_2_edit_text_age).toString()));
         nextPage(view);
     }
 

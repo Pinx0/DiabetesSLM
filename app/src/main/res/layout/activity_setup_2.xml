@@ -38,6 +38,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/setup_fragment_2_text_view_title"
                 android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Intro" />
 
             <TextView
@@ -164,9 +165,9 @@
                     android:text="Bolígrafo" />
 
             </RadioGroup>
-            
+
         </RelativeLayout>
-        
+
     </ScrollView>
 
     <LinearLayout

@@ -48,6 +48,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/setup_fragment_2_text_view_intro"
                 android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Age" />
 
             <EditText
@@ -59,6 +60,7 @@
                 android:layout_toEndOf="@+id/setup_fragment_2_text_view_age"
                 android:layout_below="@+id/setup_fragment_2_text_view_age"
                 android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-light"
                 android:layout_alignParentStart="true" />
 
             <TextView
@@ -69,6 +71,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/setup_fragment_2_edit_text_age"
                 android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Sex" />
 
             <RadioGroup
@@ -85,6 +88,7 @@
                     android:onClick="onRadioButtonClicked"
                     style="@style/content_text_radio_buttons"
                     android:text="Man"
+                    android:fontFamily="sans-serif-light"
                     android:layout_marginTop="12dp"/>
 
                 <RadioButton
@@ -93,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     style="@style/content_text_radio_buttons"
+                    android:fontFamily="sans-serif-light"
                     android:text="Woman" />
 
             </RadioGroup>
@@ -105,6 +110,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/setup_fragment_2_radio_group_sex"
                 android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Age" />
 
             <EditText
@@ -116,6 +122,7 @@
                 style="@style/content_text"
                 android:layout_toEndOf="@+id/setup_fragment_2_text_view_height"
                 android:layout_below="@+id/setup_fragment_2_text_view_height"
+                android:fontFamily="sans-serif-light"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
@@ -127,6 +134,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/setup_fragment_2_edit_text_height"
                 android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-light"
                 android:text="Injection system" />
 
             <RadioGroup
@@ -143,6 +151,7 @@
                     android:onClick="onRadioButtonClicked"
                     style="@style/content_text_radio_buttons"
                     android:text="Bomba"
+                    android:fontFamily="sans-serif-light"
                     android:layout_marginTop="12dp"/>
 
                 <RadioButton
@@ -151,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     style="@style/content_text_radio_buttons"
+                    android:fontFamily="sans-serif-light"
                     android:text="Bolígrafo" />
 
             </RadioGroup>

@@ -143,7 +143,7 @@
             </RadioGroup>
 
             <TextView
-                android:id="@+id/setup_fragment_2_text_view_height"
+                android:id="@+id/setup_fragment_2_text_view_weight"
                 style="@style/content_text"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -151,17 +151,17 @@
                 android:layout_below="@+id/setup_fragment_2_radio_group_genre"
                 android:layout_marginTop="24dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Age" />
+                android:text="Weight (in kg)" />
 
             <EditText
-                android:id="@+id/setup_fragment_2_edit_text_height"
+                android:id="@+id/setup_fragment_2_edit_text_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="test 1"
                 style="@style/content_text"
-                android:layout_toEndOf="@+id/setup_fragment_2_text_view_height"
-                android:layout_below="@+id/setup_fragment_2_text_view_height"
+                android:layout_toEndOf="@+id/setup_fragment_2_text_view_weight"
+                android:layout_below="@+id/setup_fragment_2_text_view_weight"
                 android:fontFamily="sans-serif-light"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
@@ -197,7 +197,7 @@
             android:layout_weight="1"
             android:background="@drawable/grey_bottom_buttons"
             android:text="@string/button_next"
-            android:onClick="nextPage" />
+            android:onClick="nextPage2" />
         
     </LinearLayout>
 

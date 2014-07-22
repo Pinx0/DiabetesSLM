@@ -6,9 +6,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.RadioButton;
 
 import com.pablolopezponce.diabetesslm.MainMenuActivity;
@@ -114,10 +114,14 @@ public class SetupActivity extends FragmentActivity
     {
         boolean injectionSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_pen));
         boolean genre = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_woman));
+        EditText age_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_age);
+        int age = Integer.parseInt(age_text.getText().toString());
+        EditText weight_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_weight);
+        int weight = Integer.parseInt(weight_text.getText().toString());
         savedData.edit().putBoolean("injectionSystem", injectionSystem).commit();
         savedData.edit().putBoolean("genre", genre).commit();
-        Log.i(MyRes.TAG, "" + Integer.parseInt(findViewById(R.id.setup_fragment_2_edit_text_age).toString()));
-        savedData.edit().putInt("age", Integer.parseInt(findViewById(R.id.setup_fragment_2_edit_text_age).toString()));
+        savedData.edit().putInt("age", age).commit();
+        savedData.edit().putInt("weight", weight).commit();
         nextPage(view);
     }
 

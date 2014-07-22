@@ -59,6 +59,17 @@
                     android:layout_below="@+id/setup_fragment_1_text_view_unit_system"
                     android:orientation="vertical">
 
+                   <RadioButton
+                       android:id="@+id/setup_fragment_radio_button_metric"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:onClick="onRadioButtonClicked"
+                       style="@style/content_text_radio_buttons"
+                       android:fontFamily="sans-serif-light"
+                       android:layout_marginTop="12dp"
+                       android:checked="true"
+                       android:text="Metric system" />
+
                     <RadioButton
                         android:id="@+id/setup_fragment_radio_button_imperial"
                         android:layout_width="wrap_content"
@@ -66,17 +77,7 @@
                         android:onClick="onRadioButtonClicked"
                         style="@style/content_text_radio_buttons"
                         android:text="Imperial system"
-                        android:fontFamily="sans-serif-light"
-                        android:layout_marginTop="12dp"/>
-
-                    <RadioButton
-                        android:id="@+id/setup_fragment_radio_button_metric"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="onRadioButtonClicked"
-                        style="@style/content_text_radio_buttons"
-                        android:fontFamily="sans-serif-light"
-                        android:text="Metric system" />
+                        android:fontFamily="sans-serif-light"/>
 
                </RadioGroup>
 
@@ -99,23 +100,24 @@
                 android:orientation="vertical">
 
                 <RadioButton
-                    android:id="@+id/setup_fragment_radio_button_mmoll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    style="@style/content_text_radio_buttons"
-                    android:fontFamily="sans-serif-light"
-                    android:layout_marginTop="12dp"
-                    android:text="mmol/l"/>
-
-            <RadioButton
                     android:id="@+id/setup_fragment_radio_button_mgdl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     style="@style/content_text_radio_buttons"
                     android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="12dp"
+                    android:checked="true"
                     android:text="mg/dl"/>
+
+                <RadioButton
+                    android:id="@+id/setup_fragment_radio_button_mmoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    style="@style/content_text_radio_buttons"
+                    android:fontFamily="sans-serif-light"
+                    android:text="mmol/l"/>
 
             </RadioGroup>
 

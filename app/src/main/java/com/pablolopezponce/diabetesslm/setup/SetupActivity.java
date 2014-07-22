@@ -6,12 +6,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.RadioButton;
 
 import com.pablolopezponce.diabetesslm.MainMenuActivity;
 import com.pablolopezponce.diabetesslm.R;
+import com.pablolopezponce.diabetesslm.resources.MyRes;
 
 public class SetupActivity extends FragmentActivity 
 {
@@ -88,7 +90,9 @@ public class SetupActivity extends FragmentActivity
 	}
 
 	public void nextPage(View view)
-	{
+    {
+        Log.i(MyRes.TAG, "Ola k ase");
+        MyRes.saveSettingsDate(this);
 		pager.setCurrentItem(pager.getCurrentItem() + 1);
 	}
 

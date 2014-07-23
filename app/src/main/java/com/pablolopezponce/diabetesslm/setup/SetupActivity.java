@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -14,6 +15,8 @@ import android.widget.RadioButton;
 import com.pablolopezponce.diabetesslm.MainMenuActivity;
 import com.pablolopezponce.diabetesslm.R;
 import com.pablolopezponce.diabetesslm.resources.MyRes;
+
+import java.util.Map;
 
 public class SetupActivity extends FragmentActivity 
 {
@@ -51,10 +54,6 @@ public class SetupActivity extends FragmentActivity
 		
 	}
 	
-	public ViewPager getpager()
-    {
-    	return pager;
-    }
 
 	@Override
 	public void onBackPressed() 
@@ -91,8 +90,7 @@ public class SetupActivity extends FragmentActivity
 
     public boolean isRadioButtonChecked (View view)
     {
-        boolean checked = ((RadioButton) view).isChecked();
-        return checked;
+        return ((RadioButton) view).isChecked();
     }
 
 	public void nextPage(View view)
@@ -105,23 +103,65 @@ public class SetupActivity extends FragmentActivity
     {
         boolean unitSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_radio_button_imperial));
         boolean sugarBloodUnit = isRadioButtonChecked(findViewById(R.id.setup_fragment_radio_button_mmoll));
-        savedData.edit().putBoolean("unitSystem", unitSystem).commit();
-        savedData.edit().putBoolean("sugarBloodUnit", sugarBloodUnit).commit();
+        savedData.edit().putBoolean("unitSystem", unitSystem).apply();
+        savedData.edit().putBoolean("sugarBloodUnit", sugarBloodUnit).apply();
         nextPage(view);
     }
 
     public void nextPage2 (View view)
     {
         boolean injectionSystem = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_pen));
-        boolean genre = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_woman));
-        EditText age_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_age);
-        int age = Integer.parseInt(age_text.getText().toString());
-        EditText weight_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_weight);
-        int weight = Integer.parseInt(weight_text.getText().toString());
-        savedData.edit().putBoolean("injectionSystem", injectionSystem).commit();
-        savedData.edit().putBoolean("genre", genre).commit();
-        savedData.edit().putInt("age", age).commit();
-        savedData.edit().putInt("weight", weight).commit();
+        boolean injectionSystem2 = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_pump));
+        if(injectionSystem||injectionSystem2) {
+            boolean genre = isRadioButtonChecked(findViewById(R.id.setup_fragment_2_radio_button_woman));
+            EditText age_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_age);
+            int age = Integer.parseInt(age_text.getText().toString());
+            EditText weight_text = (EditText) findViewById(R.id.setup_fragment_2_edit_text_weight);
+            int weight = Integer.parseInt(weight_text.getText().toString());
+            savedData.edit().putBoolean("injectionSystem", injectionSystem).apply();
+            savedData.edit().putBoolean("genre", genre).apply();
+            savedData.edit().putInt("age", age).apply();
+            savedData.edit().putInt("weight", weight).apply();
+            nextPage(view);
+        }
+    }
+
+    public void nextPage3 (View view)
+    {
+        EditText basal_text0 = (EditText) findViewById(R.id.setup_fragment_3_edit_text_1);
+        int basal0 = Integer.parseInt(basal_text0.getText().toString());
+        savedData.edit().putInt("basalRate0", basal0).apply();
+        EditText basal_text1 = (EditText) findViewById(R.id.setup_fragment_3_edit_text_2);
+        int basal1 = Integer.parseInt(basal_text1.getText().toString());
+        savedData.edit().putInt("basalRate1", basal1).apply();
+        /* falta repetir con el resto de horas */
+        nextPage(view);
+    }
+    public void nextPage4 (View view)
+    {
+        EditText basal_text = (EditText) findViewById(R.id.setup_fragment_4_edit_text_1);
+        int basal = Integer.parseInt(basal_text.getText().toString());
+        savedData.edit().putInt("basalRate", basal).apply();
+        nextPage(view);
+    }
+    public void nextPage5 (View view)
+    {
+        EditText breakfast_text = (EditText) findViewById(R.id.setup_fragment_5_edit_text_1);
+        float breakfast = Float.parseFloat(breakfast_text.getText().toString());
+        savedData.edit().putFloat("breakfast", breakfast).apply();
+        EditText lunch_text = (EditText) findViewById(R.id.setup_fragment_5_edit_text_2);
+        float lunch = Float.parseFloat(lunch_text.getText().toString());
+        savedData.edit().putFloat("lunch", lunch).apply();
+        EditText dinner_text = (EditText) findViewById(R.id.setup_fragment_5_edit_text_3);
+        float dinner = Float.parseFloat(dinner_text.getText().toString());
+        savedData.edit().putFloat("dinner", dinner).apply();
+        nextPage(view);
+    }
+    public void nextPage6 (View view)
+    {
+        EditText correction_text = (EditText) findViewById(R.id.setup_fragment_6_edit_text_1);
+        int correction = Integer.parseInt(correction_text.getText().toString());
+        savedData.edit().putInt("correction", correction).apply();
         nextPage(view);
     }
 
@@ -132,7 +172,15 @@ public class SetupActivity extends FragmentActivity
 
     public void finishSetup(View view)
     {
-        savedData.edit().putBoolean("finishedSetup", true).commit();
+        savedData.edit().putBoolean("finishedSetup", true).apply();
+
+        /* muestra todas las preferencias guardadas, debugging simplemente */
+        Map<String,?> keys = savedData.getAll();
+        for(Map.Entry<String,?> entry : keys.entrySet()){
+            Log.i("map values", entry.getKey() + ": " +
+                    entry.getValue().toString());
+        }
+        /* fin muestra */
         Intent finishSetupIntent = new Intent(this, MainMenuActivity.class);
         startActivity(finishSetupIntent);
         this.finish();

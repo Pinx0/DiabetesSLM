@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.util.Log;
 
 public class MyRes extends Application 
 {
@@ -20,8 +19,8 @@ public class MyRes extends Application
     public static void saveSettingsDate(Context context)
     {
         long unixTime = System.currentTimeMillis() / 1000L;
-        /* Pendiente de corregir string */
+        /* Pendiente de corregir, lo logico seria coger el valor com.pablolopezponce... de R.strings */
         savedData = context.getSharedPreferences("com.pablolopezponce.diabetesslm.savedata", context.MODE_PRIVATE);
-        savedData.edit().putLong("settingsTime", unixTime).commit();
+        savedData.edit().putLong("settingsTime", unixTime).apply();
     }
 }

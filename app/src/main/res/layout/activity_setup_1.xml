@@ -27,7 +27,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/setup_text_view_title"
-                    android:textColor="@color/dark_blue"
+                    android:textColor="@color/light_blue_text"
                     android:textSize="35sp" />
 
                <TextView
@@ -39,7 +39,7 @@
                     android:layout_below="@+id/setup_fragment_1_text_view_title"
                     android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif-light"
-                    android:text="Intro" />
+                    android:text="@string/setup_fragment_1_text_view_intro" />
 
                <TextView
                     android:id="@+id/setup_fragment_1_text_view_unit_system"

@@ -32,7 +32,7 @@ public class MainActivity extends Activity
 			startActivity(startMainMenuActivity);
 			this.finish();
 			
-		} else if(userEmail!=null || true) {
+		} else if(userEmail!=null) {
 
 			// Inicializamos la actividad de setup porque el user no lo acabó de rellenar //
 			Intent startSetupActivity = new Intent(MainActivity.this, SetupActivity.class);

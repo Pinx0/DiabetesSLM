@@ -26,7 +26,7 @@
                     android:layout_alignParentTop="true"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:text="@string/setup_text_view_title"
+                    android:text="@string/setup_fragment_6_text_view_title"
                     android:textColor="@color/light_blue_text"
                     android:textSize="35sp" />
 
@@ -40,7 +40,7 @@
                 android:gravity="left"
                 android:layout_marginTop="24dp"
                 android:layout_below="@+id/setup_fragment_6_text_view_title"
-                android:text="Please tell us how much does your sugar blood level decrease per each unit of rapid insulin."
+                android:text="@string/setup_fragment_6_text_view_1"
                 android:textColor="@color/dark_grey_text"
                 android:textSize="16sp" />
 
@@ -53,7 +53,7 @@
                 android:gravity="left"
                 android:layout_marginTop="24dp"
                 android:layout_below="@+id/setup_fragment_6_text_view_1"
-                android:text="Correction factor"
+                android:text="@string/setup_fragment_6_text_view_2"
                 android:textColor="@color/dark_grey_text"
                 android:textSize="16sp" />
 
@@ -63,11 +63,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:gravity="left"
-                android:text=" (mg/dl per insulin unit):"
+                android:text="@string/setup_fragment_6_text_view_3"
                 android:textColor="@color/dark_grey_text"
                 android:textSize="16sp"
                 android:layout_alignTop="@+id/setup_fragment_6_text_view_2"
-                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="8dp"
                 android:layout_toEndOf="@+id/setup_fragment_6_text_view_2" />
 
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/grey_bottom_buttons"
                 android:text="@string/button_next"
-                android:onClick="nextPage" />
+                android:onClick="nextPage6" />
             
     </LinearLayout>
     

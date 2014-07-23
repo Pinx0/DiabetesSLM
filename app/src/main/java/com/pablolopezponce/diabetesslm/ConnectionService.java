@@ -119,8 +119,8 @@ public class ConnectionService extends Service {
                         {
                             Log.i(MyRes.TAG, "Token: " + token);
 
-                            savedData.edit().putString("userEmail", userEmail).commit();
-                            savedData.edit().putString("token", token).commit();
+                            savedData.edit().putString("userEmail", userEmail).apply();
+                            savedData.edit().putString("token", token).apply();
 
                             HttpPost httppost = new HttpPost(getString(R.string.url));
                             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();

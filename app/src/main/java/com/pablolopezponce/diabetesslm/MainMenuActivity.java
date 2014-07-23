@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.view.Menu;
+
 import com.pablolopezponce.diabetesslm.ConnectionService.LocalBinder;
 
 public class MainMenuActivity extends Activity {
@@ -36,17 +36,10 @@ public class MainMenuActivity extends Activity {
         if (mBound) {
         	unbindService(mConnection);
             mBound = false;
-            stopService(new Intent(this, ConnectionService.class));
         }
     }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main_menu, menu);
-		return true;
-	}
-	
+
 	/** Defines callbacks for service binding, passed to bindService() */
     private ServiceConnection mConnection = new ServiceConnection() {
 

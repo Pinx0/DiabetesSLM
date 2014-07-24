@@ -26,7 +26,7 @@ public class MainActivity extends Activity
 		userEmail = savedData.getString("userEmail", null);
 		finishedSetup = savedData.getBoolean("finishedSetup", false);
 		
-		if(userEmail!=null && finishedSetup && false) {
+		if(userEmail!=null && finishedSetup) {
 			// Inicializamos la actividad de menú principal porque ya tenemos lo necesario //
 			Intent startMainMenuActivity = new Intent(MainActivity.this, MainMenuActivity.class);
 			startActivity(startMainMenuActivity);

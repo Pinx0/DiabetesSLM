@@ -19,11 +19,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <service
-            android:name="com.pablolopezponce.diabetesslm.ConnectionService"
-            />
+
+        <service android:name=".ConnectionService" />
+
         <activity
-            android:name="com.pablolopezponce.diabetesslm.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,15 +31,54 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.pablolopezponce.diabetesslm.WelcomeActivity" >
+        <activity android:name=".WelcomeActivity" >
         </activity>
-        <activity android:name="com.pablolopezponce.diabetesslm.AccountSelectActivity" >
+        <activity android:name=".AccountSelectActivity" >
         </activity>
-        <activity android:name="com.pablolopezponce.diabetesslm.setup.SetupActivity" >
+        <activity android:name=".setup.SetupActivity" >
         </activity>
-        <activity android:name="com.pablolopezponce.diabetesslm.MainMenuActivity">
+        <activity android:name=".MainMenuActivity" >
+        </activity>
+        <activity
+            android:name=".DiseaseActivity"
+            android:label="@string/title_activity_disease"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".GlucoseActivity"
+            android:label="@string/title_activity_glucose"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/title_activity_food"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".BolusActivity"
+            android:label="@string/title_activity_bolus"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".ExerciseActivity"
+            android:label="@string/title_activity_exercise"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
         </activity>
     </application>
 
 </manifest>
-

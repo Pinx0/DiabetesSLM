@@ -9,14 +9,33 @@
     <color name="light_grey_button_border">#EEEEEE</color>
     <color name="dark_grey_button_text">#666666</color>
     <color name="dark_grey_text">#555555</color>
+    <color name="grey_blue_button_bg_1">#616f78</color>
+    <color name="grey_blue_button_bg_2">#658092</color>
+
     
     <!-- Azules -->
     <color name="dark_blue">#5e7ca1</color>
     <color name="light_blue_text">#9ac8e9</color>
     <color name="light_blue_button_pressed">#f0f7fb</color>
-    <color name="light_blue_button_pressed_border">#c4e2f1</color>  
+    <color name="light_blue_button_pressed_border">#c4e2f1</color>
+    <color name="blue_button_bg_1">#3597c6</color>
+    <color name="blue_button_bg_2">#1aa1e1</color>
+
     
     <!-- Blanco -->
     <color name="white">#FFFFFF</color>
+
+    <!-- Rojos -->
+    <color name="red_button_bg_1">#ba5348</color>
+    <color name="red_button_bg_2">#ce5043</color>
+
+    <!-- Naranjas -->
+    <color name="orange_button_bg_1">#de8439</color>
+    <color name="orange_button_bg_2">#fb8521</color>
+
+    <!-- Verdes -->
+    <color name="green_button_bg_1">#9ba945</color>
+    <color name="green_button_bg_2">#b3c833</color>
+
     
 </resources>

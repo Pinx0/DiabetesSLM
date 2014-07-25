@@ -21,6 +21,6 @@ public class MyRes extends Application
         long unixTime = System.currentTimeMillis() / 1000L;
         /* Pendiente de corregir, lo logico seria coger el valor com.pablolopezponce... de R.strings */
         savedData = context.getSharedPreferences("com.pablolopezponce.diabetesslm.savedata", context.MODE_PRIVATE);
-        savedData.edit().putLong("settingsTime", unixTime).apply();
+        savedData.edit().putBoolean("updateSettings", true).apply();
     }
 }

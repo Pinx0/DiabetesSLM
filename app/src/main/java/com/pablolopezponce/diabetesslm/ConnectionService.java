@@ -157,7 +157,7 @@ public class ConnectionService extends Service {
                             Float dinner = savedData.getFloat("dinner", 0);
                             int correction = savedData.getInt("correction", 0);
                             Boolean updateSettings = savedData.getBoolean("updateSettings", false);
-                            Long settingsTimeServer = savedData.getLong("settingsTimeServer", 0);
+                            Long settingsTimeServer = savedData.getLong("settingsTime", 0);
 
                              HttpPost httppost = new HttpPost(getString(R.string.url));
                             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -229,7 +229,7 @@ public class ConnectionService extends Service {
                                 if(response.equalsIgnoreCase("UPDATED")) {
                                     String newSettingsTimeServerString = object.getString("settingsTimeServer");
                                     Long newSettingsTimeServer = Long.parseLong(newSettingsTimeServerString);
-                                    savedData.edit().putLong("settingsTimeServer", newSettingsTimeServer).apply();
+                                    savedData.edit().putLong("settingsTime", newSettingsTimeServer).apply();
                                     savedData.edit().putBoolean("updateSettings", false).apply();
                                 }
                                 //Si hay una actualización más nueva que la ultima desde este dispositivo, hay que actualizarlo.

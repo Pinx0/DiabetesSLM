@@ -5,21 +5,49 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.ListView;
 
 import com.pablolopezponce.diabetesslm.ConnectionService.LocalBinder;
+import com.pablolopezponce.diabetesslm.resources.DrawerMenuItem;
+import com.pablolopezponce.diabetesslm.resources.NavigationAdapter;
+
+import java.util.ArrayList;
 
 public class MainMenuActivity extends Activity {
 	
     ConnectionService mService;
     boolean mBound = false;
+    private DrawerLayout NavDrawerLayout;
+    private ListView NavDrawerList;
+    private ArrayList<DrawerMenuItem> NavDrawerItems;
+    private TypedArray NavIcons;
+    private String[] titles;
+    NavigationAdapter NavAdapter;
+
+
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
+
+        NavDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        NavDrawerList = (ListView) findViewById(R.id.left_drawer);
+        View drawerHeader = getLayoutInflater().inflate(R.layout.drawer_menu_header, null);
+        NavDrawerList.addHeaderView(drawerHeader);
+        NavIcons = getResources().obtainTypedArray(R.array.nav_icons);
+        titles = getResources().getStringArray(R.array.nav_options);
+        NavDrawerItems = new ArrayList<DrawerMenuItem>();
+        NavDrawerItems.add(new DrawerMenuItem(titles[0],NavIcons.getResourceId(0, -1)));
+        NavDrawerItems.add(new DrawerMenuItem(titles[1],NavIcons.getResourceId(1, -1)));
+        NavAdapter = new NavigationAdapter(this,NavDrawerItems);
+        NavDrawerList.setAdapter(NavAdapter);
 	}
 	
 	@Override

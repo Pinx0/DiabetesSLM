@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+
 import com.pablolopezponce.diabetesslm.resources.MyRes;
 import com.pablolopezponce.diabetesslm.setup.SetupActivity;
 
@@ -26,7 +27,7 @@ public class MainActivity extends Activity
 		userEmail = savedData.getString("userEmail", null);
 		finishedSetup = savedData.getBoolean("finishedSetup", false);
 		
-		if(userEmail!=null && finishedSetup) {
+		if(userEmail!=null && finishedSetup || true) {
 			// Inicializamos la actividad de menú principal porque ya tenemos lo necesario //
 			Intent startMainMenuActivity = new Intent(MainActivity.this, MainMenuActivity.class);
 			startActivity(startMainMenuActivity);

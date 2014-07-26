@@ -79,6 +79,34 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".StatisticsActivity"
+            android:label="@string/title_activity_statistics"
+            android:parentActivityName=".MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pablolopezponce.diabetesslm.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".DataActivity"
+            android:label="@string/title_activity_data" >
+        </activity>
+        <activity
+            android:name=".GraphsActivity"
+            android:label="@string/title_activity_graphs" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>

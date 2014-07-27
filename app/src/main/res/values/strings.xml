@@ -17,12 +17,12 @@
     </string-array>
 
     <array name="nav_icons">
-        <item>@android:drawable/ic_menu_add</item>
-        <item>@android:drawable/ic_menu_my_calendar</item>
-        <item>@android:drawable/ic_menu_report_image</item>
-        <item>@drawable/ic_action_crop</item>
-        <item>@drawable/ic_action_settings</item>
-        <item>@drawable/ic_action_about</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_log</item>
+        <item>@drawable/ic_stats</item>
+        <item>@drawable/ic_graphs</item>
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_about</item>
     </array>
 
     <!-- Welcome Activity -->

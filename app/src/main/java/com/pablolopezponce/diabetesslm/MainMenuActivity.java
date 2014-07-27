@@ -45,7 +45,7 @@ public class MainMenuActivity extends Activity {
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 NavDrawerLayout,
-                R.drawable.health_icon,
+                R.drawable.ic_health,
                 R.string.app_name,
                 R.string.title_activity_food
 
@@ -78,6 +78,7 @@ public class MainMenuActivity extends Activity {
         NavDrawerList.setAdapter(NavAdapter);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
         NavDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
@@ -147,6 +148,7 @@ public class MainMenuActivity extends Activity {
     }
 
     public void OpenActivityFromDrawer(int position) {
+        NavDrawerLayout.closeDrawers();
         Log.i(MyRes.TAG,"position" + position);
         switch (position) {
             case 1:
